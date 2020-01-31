@@ -3,7 +3,7 @@ FROM pandoc/latex:latest
 
 # Install additional latex packages
 RUN tlmgr update --self \
-    && tlmgr install titlesec pagecolor mdframed needspace sourcesanspro sourcecodepro ly1 mweights titling zref
+    && tlmgr install adjustbox babel-german babel-spanish background bidi collectbox csquotes everypage filehook footmisc footnotebackref framed fvextra letltxmacro ly1 mdframed mweights needspace pagecolor sourcecodepro sourcesanspro titling ucharcat ulem unicode-math upquote xecjk xurl zref
 
 # Install java
 RUN apk --update add openjdk7-jre
