@@ -1,9 +1,9 @@
 # Base image
-FROM pandoc/latex
+FROM pandoc/latex:latest
 
 # Install additional latex packages
 RUN tlmgr update --self \
-    && tlmgr install titlesec pagecolor mdframed needspace sourcesanspro sourcecodepro ly1 mweights titling
+    && tlmgr install titlesec pagecolor mdframed needspace sourcesanspro sourcecodepro ly1 mweights titling zref
 
 # Install java
 RUN apk --update add openjdk7-jre
